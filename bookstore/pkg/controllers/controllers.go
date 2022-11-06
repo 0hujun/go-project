@@ -96,4 +96,9 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	_, _ = w.Write(res)
 }
 
-
+func HomePage(w http.ResponseWriter, r *http.Request) {
+	err := json.NewEncoder(w).Encode("HomePage")
+	if err != nil {
+		return
+	}
+}
